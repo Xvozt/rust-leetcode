@@ -15,10 +15,10 @@
 
 #[allow(dead_code)]
 fn find_max_consecutive_ones(nums: Vec<i32>) -> i32 {
-    nums.split(|&num| num == 0)
-        .map(|ones| ones.len() as i32)
-        .max()
-        .unwrap_or(0)
+    nums.split(|&num| num == 0) // split vector with '0' as separator, slices contain consecutive ones
+        .map(|ones| ones.len() as i32) // map each slice with ones to it's length
+        .max() // find max length
+        .unwrap_or(0) // return max length of consecutive ones or 0 (also handle conrner cases)
 }
 #[cfg(test)]
 mod tests {
