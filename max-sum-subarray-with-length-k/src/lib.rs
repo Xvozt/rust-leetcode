@@ -57,7 +57,8 @@ mod tests {
         let result = find_max_subarray_sum(&nums, 4);
         assert_eq!(result.unwrap(), 39);
     }
-
+    
+    #[test]
     fn it_works_idiomatic() {
         let nums = [1, 4, 2, 10, 23, 3, 1, 0, 20];
         let result = find_max_subarray_sum_idiomatic(&nums, 4);
