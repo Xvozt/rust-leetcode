@@ -41,6 +41,9 @@ pub fn find_max_subarray_sum_idiomatic(nums: &[i32], k: usize) -> Option<i32> {
         max_sum = max_sum.max(current_sum);
     }
 
+    // alternative way with windows
+    // nums.windows(k).map(|window| window.iter().sum()).max()
+
     Some(max_sum)
 
 }
