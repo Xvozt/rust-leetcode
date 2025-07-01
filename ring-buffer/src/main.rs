@@ -56,16 +56,16 @@ fn main() {
     println!("Let's learn about ring buffer");
 
     let mut b = RingBuffer::<i32>::new(3);
-    let ps1 = b.push(5).unwrap();
-    let ps2 = b.push(6).unwrap();
+    let _ = b.push(5).unwrap();
+    let _ = b.push(6).unwrap();
     let pl1 = b.pull().unwrap();
     //here expect 5
     println!("{pl1:?}");
-    let ps3 = b.push(1).unwrap();
+    let _ = b.push(1).unwrap();
     //here expect [3, 6, 1]
-    let ps4 = b.push(3).unwrap();
+    let _ = b.push(3).unwrap();
     println!("{b:?}");
     //here expect Error Full
-    let ps5 = b.push(9).unwrap();
+    let _ = b.push(9).unwrap();
     println!("{b:?}");
 }
